@@ -1,0 +1,657 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light dark;
+}
+html{
+  font-size: 62%;
+}
+
+/* base style  */
+body{
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+p,
+li,
+label,
+input,
+textarea {
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: rgb(168, 168, 236);
+  text-decoration: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+/* layout */
+.container {
+  max-width: 120rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.grid{
+  display: grid;
+}
+.grid-two-col{
+  grid-template-columns: auto auto
+}
+.grid-four-col{
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+}
+.grid-three-col{
+  grid-template-columns: auto auto auto;
+  grid-gap: 60px;
+}
+
+  /* -----toastify css---- */
+.toastBody{
+  font-size: 1.5rem;
+}
+
+/*? Module Rules / Reusable */
+button {
+  text-transform: capitalize;
+  padding: 0.9rem 2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: #32bae4f1;
+  border-radius: 0.8rem;
+  border: 0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+}
+button:hover{
+  filter: brightness(90%);
+  box-shadow: inset 0 0 0 0.2rem white;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0.2rem white;
+  margin-left: 3.2rem;
+}
+
+.secondary-btn:hover{
+  box-shadow: inset 0 0 0 0.2rem #32bae4f1;
+}
+
+/* home info  */
+.home-info{
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-left: 100px; */
+  /* align-items: center; */
+}
+
+.home-info > *{
+  margin-bottom: 20px;
+}
+.btn-1-margin{
+  margin-top: 4rem;
+}
+.home-img img{
+  /* margin: 4rem; */
+  width: 400;
+  height: 400;
+}
+@media screen and (max-width:880px){
+  .img-first-page{
+    display: none;
+  }
+}
+@media screen and (max-width:400px) {
+  .btn-group{
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-1-margin{
+    margin: 0;
+    margin-top: 3rem;
+  } 
+}
+@media screen and (max-width:407px) {
+  .btn-2-margin{
+    margin: 0;
+    margin-top: 3rem;
+  } 
+  
+}
+
+/* *******Analytics-section********
+*******Analytics-section********
+*******Analytics-section******** */
+.analytics-section{
+  margin: 9.6rem 0;
+
+  & .container{
+    background-color: white;
+    border-radius: 6px;
+    padding: 3rem 2rem;
+  }
+  
+  & .grid{
+    color: black;
+  
+  & .div1{
+    text-align: center;
+    border-right: 0.2rem solid black;
+    padding-right: 3rem;
+
+    &:last-child{
+      border: none;
+    }
+
+    & h2{
+      font-size: 4rem;
+    }
+    & p{
+      text-transform: capitalize;
+    }
+  }
+}
+}
+@media screen and (max-width: 551px) {
+  .analytics-section{
+    margin: 2rem;
+    & .container{
+      grid-template-columns: auto;
+      & .div1{
+        border-bottom:0.2rem solid black;
+        border-right: none;
+        padding-bottom: 3rem;
+      }
+
+      /* & .div1{
+        & h2{
+          font-size: 3rem;
+        }
+        & p{
+          font-size: 1rem;
+        }
+
+      } */
+    }
+  }
+  .analytics{
+    margin: 0 auto;
+  }
+  
+}
+
+/* third section  */
+.third-section{
+  & .container{
+    grid-gap: 100px;
+  }
+  & .home-info{
+    max-width: 724px;
+  }
+}
+
+
+
+@media screen and (max-width: 686px) {
+  .third-section{
+    & .home-img{
+      margin: 0 auto;
+
+    }
+  }
+  .grid-one-col{
+    grid-template-columns: auto;
+  }
+}
+
+/* ******footer******* */
+/* ******footer******* */
+/* ******footer******* */
+footer{
+  background-color: #ffff;
+  color: black;
+  text-align: center;
+  padding: 4rem;
+  margin-top: 10rem;
+}
+
+/* ---- About page------- */
+/* ---- About page------- */
+/* ---- About page------- */
+
+.about-info{
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* margin-left: 100px; */
+  /* align-items: center; */
+}
+
+.about-info > *{
+  margin-bottom: 20px;
+
+  & :last-child{
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 884px) {
+  .about{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+
+    /* grid-template-columns: auto; */
+  }
+  .about-info{
+    margin-top: 4rem;
+  }
+  .about-img{
+    margin-right: 4rem;
+  }
+  .about-img img{
+    width: 300px;
+    height: 250px;
+  }
+  
+}
+
+@media screen and (max-width: 371px) {
+  .secondary-btn-about{
+    margin-left: 0;
+    margin-top: 0;
+  }
+  .about-btn{
+    display: flex;
+    flex-direction: column;
+  }
+  .about-info{
+    & :last-child{
+      margin-top: 2rem;
+    }
+  }
+  
+}
+
+
+/* ---- Contact page------- */
+/* ---- Contact page------- */
+/* ---- Contact page------- */
+
+.contact-heading{
+  text-align: center;
+  text-transform: capitalize;
+  margin: 3rem 2rem;
+}
+.contact-page{
+  & .container{
+    grid-gap: 100px;
+  }
+
+  & .contact-img {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    & img {
+      width: 80%;
+      height: auto;
+    }
+  }
+  & .section-form{
+    display: flex;
+    justify-content: center;
+
+    & form{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    & label {
+      display: block;
+      margin-bottom: 1.2rem;
+      text-transform: capitalize;
+    }
+    & input,textarea{
+      width: 80%;
+      padding: 0.4rem 0.6rem;
+    }
+  }
+}
+@media screen and (max-width: 1040px) {
+  .contact-img img{
+    display: none;
+  }
+  .contact-page{
+    margin-left: 4rem;
+   
+    & .container{
+      grid-gap: 0px;
+    }
+  }
+  .contact{
+    padding-right: 0;
+    display: grid ;
+    grid-template-columns: auto;
+    grid-gap: 0;
+  }
+  .section-form{
+    margin: 0 auto;
+  }
+  
+}
+
+
+/* ----ERROR PAGE---- */
+/* ----ERROR PAGE---- */
+/* ----ERROR PAGE---- */
+
+.error-page{
+  max-width: 800px;
+  margin: 0 auto;
+
+  & .content-item{
+    margin: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  
+    & .heading-error{
+      font-size: 20rem;
+      background-color: red;
+      background-image: linear-gradient(45deg, #f3ec78, #af4261);
+      background-size: 100%;
+      background-repeat: repeat;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;
+    }
+    & h4{
+      font-size: 1.5rem;
+    }
+    & button{
+      padding: 0.5rem 1.3rem;
+    }
+    & a{
+      color: white;
+    }
+
+
+  }
+  
+}
+
+
+/* ------login page------- */
+/* ------login page------- */
+/* ------login page------- */
+.login-heading{
+  text-align: center;
+  text-transform: capitalize;
+  margin: 3rem 2rem;
+}
+.login-page{
+  height: 100vh;
+  & .container{
+    grid-gap: 10px;
+  }
+
+  & .login-img {
+    & img {
+      border-radius: 135px;
+      width: 350px;
+      height: 300px;
+    }
+  }
+  & .login-form{
+
+    & form{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    & label {
+      display: block;
+      margin-bottom: 1.2rem;
+      text-transform: capitalize;
+    }
+    & input,textarea{
+      /* width: 60%; */
+      padding: 0.4rem 0.6rem;
+    }
+  }
+}
+@media screen and (max-width: 1040px) {
+  .login-img img{
+    display: none;
+  }
+  .login-page{
+    & .container{
+      grid-gap: 0px;
+    }
+  }
+  .login{
+    display: grid ;
+    grid-template-columns: auto;
+    grid-gap: 0;
+  }
+  .login-form{
+    margin: 0 auto;
+  }
+  
+}
+
+
+
+
+/* -------Register page-------  */
+/* -------Register page-------  */
+/* -------Register page-------  */
+.register-height{
+  height: 100vh;
+}
+.register-input input{
+  width: 150% !important;
+
+}
+.register-container{
+  grid-gap: 0px !important;
+}
+
+@media screen and (max-width: 1040px) {
+  .register-img img{
+    display: none;
+  }
+  .register{
+    display: grid ;
+    grid-template-columns: auto;
+    grid-gap: 0;
+    margin-right: 4rem;
+  }
+  .register-page{
+    margin-right: 4rem;
+  }
+  
+}
+
+/* --------service page------- */
+/* --------service page------- */
+/* --------service page------- */
+.card1{
+  border: 2px solid white;
+  padding: 2rem;
+  border-radius: 10px;
+  & *{
+    font-size: 1.8rem;
+  }
+}
+.image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.service-provider{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.service-detail{
+  & h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (max-width: 947px) {
+  .service{
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+}
+@media screen and (max-width: 688px) {
+  .service{
+    display: grid;
+    grid-template-columns: auto;
+  }
+  
+}
+
+/* --------ADMIN USER PAGE------- */
+/* --------ADMIN USER PAGE------- */
+/* --------ADMIN USER PAGE------- */
+
+
+.admin-user-heading{
+  padding-bottom: 0;
+  text-align: center;
+} 
+.admin-user{
+  margin: 0 auto;
+  margin-top: 0;
+  /* max-width: 1000px;
+  max-height: 800px; */
+
+    width: 90% !important;
+    overflow-x: scroll; 
+  
+}
+@media (max-width: 600px) {
+
+  .table-container { 
+      width: 100% !important;
+      overflow-x: scroll; 
+  }
+
+  th, td {min-width: 200px; }
+}
+table{
+  /* overflow: hidden; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-collapse: collapse;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-size:  1.6rem;
+   margin: 2rem 2rem; 
+}
+/* table tbody{
+    display: table;
+    width: 100%;
+
+} */
+th, td{
+  padding: 2rem;
+}
+thead{
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+thead th{
+  width: 150rem;
+}
+tbody td{
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+} 
+
+
+
+
+
+
+/* --------ADMIN contact PAGE------- */
+/* --------ADMIN contact PAGE------- */
+/* --------ADMIN contact PAGE------- */
+.contact-box{
+  border: 2px solid white;
+  padding: 2rem;
+  border-radius: 10px;
+  & *{
+    font-size: 1.8rem;
+  }
+  & .content{
+    margin: 2rem 0;
+    height: 20vh;
+  }
+  & .contact-provider{
+    display: flex;
+    /* flex-wrap: wrap; */
+  }
+  & p{
+    padding-left: 0.5rem ;
+  }
+  & button{
+    margin: 1.5rem 0;
+  }
+}
+
+@media screen and (max-width:1025px) {
+  .admin-contact{
+    grid-template-columns: auto auto;
+  } 
+}
+@media screen and (max-width: 656px) {
+  .admin-contact{
+    grid-template-columns: auto;
+  }
+  
+}
+
+
